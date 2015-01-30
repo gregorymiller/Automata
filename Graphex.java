@@ -14,7 +14,6 @@ import java.io.*;
 
 /**
  * Parse the regular expression for correctness
- * @author Greg
  */
 class RegexParser {
     private String input;
@@ -217,7 +216,6 @@ class RegexParser {
 /**
  * Regular expression abstract class
  * Regular expressions can be symbols, union, concatenation, or star
- * @author Greg
  */
 abstract class Regex {
     abstract public NFA createNFA(StateNumber states);
@@ -225,7 +223,6 @@ abstract class Regex {
 
 /**
  * A single symbol regular expression
- * @author Greg
  */
 class Symbol extends Regex {
     private String symbol;
@@ -256,7 +253,6 @@ class Symbol extends Regex {
 
 /**
  * Concatenate two regular expressions together
- * @author Greg
  */
 class Concatenation extends Regex {
     private Regex firstRegex;
@@ -308,7 +304,6 @@ class Concatenation extends Regex {
 
 /**
  * Union two regular expressions together
- * @author Greg
  */
 class Union extends Regex {
     private Regex firstRegex;
@@ -371,7 +366,6 @@ class Union extends Regex {
 
 /**
  * Creates a star of the regular expression
- * @author Greg
  */
 class Star extends Regex {
     private Regex regex;
@@ -420,7 +414,6 @@ class Star extends Regex {
 /**
  * Transition function keeps track of what transitions allow the DFA/NFA to 
  * move to a different state
- * @author Greg
  */
 class Transition {
     private String transitionOn;
@@ -464,7 +457,6 @@ class Transition {
 /**
  * State number keeps track of the state number so that independent states
  * are made starting a 0
- * @author Greg
  */
 class StateNumber {
     private int stateNumber = 0;
@@ -480,7 +472,7 @@ class StateNumber {
 /**
  * Creates an NFA from a given start and accept state with the delta transitions
  * between the states
- * @author Greg
+
  */
 class NFA {
     private int startState;
@@ -783,7 +775,6 @@ class NFA {
 
 /**
  * Creates a DFA with a start state and a set of accepting state in their transitions
- * @author Greg
  */
 class DFA {
     private int startState;
@@ -1010,7 +1001,6 @@ class DFA {
 
 /**
  * Contains the main method for running the program
- * @author Greg
  */
 public class Graphex {
 
